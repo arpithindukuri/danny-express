@@ -137,9 +137,13 @@ export default function Train() {
   }, []);
 
   return (
-    <div style={{ position: "relative", overflow: "visible" }}>
+    <div style={{ position: "relative", width: "100%", overflow: "hidden" }}>
       <pre>
-        <p className="font-mono leading-none xs:text-6xs md:text-4xs lg:text-3xs text-center text-neutral-500">
+        <p
+          className="font-mono leading-none text-center
+                      xs:text-6xs md:text-5xs lg:text-4xs
+                    text-neutral-500"
+        >
           {ascii}
         </p>
       </pre>
@@ -161,8 +165,8 @@ export default function Train() {
         }}
       >
         <Asciify setAscii={setAscii}>
-          <ambientLight intensity={0.4} />
-          <pointLight position={[10, 10, 10]} intensity={0.4} />
+          <ambientLight intensity={0.3} />
+          <pointLight position={[10, 10, 10]} intensity={0.5} />
           {/* <Box position={[-1.2, 0, 0]} /> */}
           {/* <Box position={[1.2, 0, 0]} /> */}
           <Suspense fallback={<>"NULL"</>}>
