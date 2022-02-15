@@ -20,15 +20,8 @@ export default function imageDataToAscii(
       const r = data[dataIndex];
       const g = data[dataIndex + 1];
       const b = data[dataIndex + 2];
-      const a = data[dataIndex + 3];
 
       const luminosity = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
-
-      // if (r !== 0) {
-      //   console.log(r);
-      // }
-
-      const val = a < 1 ? luminosity * a : luminosity;
 
       const char = AsciiLookup.charAt(
         Math.floor((1 - luminosity) * (AsciiLookup.length - 1))

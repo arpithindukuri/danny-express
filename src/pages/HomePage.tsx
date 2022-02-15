@@ -1,4 +1,3 @@
-import Train from "../components/Train";
 import Hero from "./Hero";
 
 export default function HomePage() {
