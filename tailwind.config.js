@@ -1,24 +1,15 @@
+const colors = require("tailwindcss/colors");
+
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     screens: {
       xs: "300px",
-      // => @media (min-width: 640px) { ... }
-
       sm: "480px",
-      // => @media (min-width: 640px) { ... }
-
       md: "720px",
-      // => @media (min-width: 768px) { ... }
-
       lg: "1024px",
-      // => @media (min-width: 1024px) { ... }
-
-      xl: "1280px",
-      // => @media (min-width: 1280px) { ... }
-
+      xl: "1440px",
       "2xl": "1536px",
-      // => @media (min-width: 1536px) { ... }
     },
     fontSize: {
       "6xs": ".125rem",
@@ -39,6 +30,21 @@ module.exports = {
       "7xl": "5rem",
       "8xl": "6rem",
       "9xl": "7rem",
+    },
+    extend: {
+      keyframes: {
+        "border-ping": {
+          "0%": {
+            boxShadow: `0 0 0 0px ${colors.orange[500]}`,
+          },
+          "100%": {
+            boxShadow: "0 0 0 6px rgba(0, 0, 0, 0)",
+          },
+        },
+      },
+      animation: {
+        "border-ping": "border-ping 0.4s ease-out",
+      },
     },
   },
   plugins: [],

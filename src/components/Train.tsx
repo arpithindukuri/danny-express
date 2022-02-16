@@ -10,6 +10,7 @@ import {
 import { Mesh } from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import imageDataToAscii from "../helper/ImageToAscii";
+import CodeBlock from "./CodeBlock";
 
 function Model() {
   const ref = useRef<Mesh>(null);
@@ -138,25 +139,28 @@ export default function Train() {
 
   return (
     <div style={{ position: "relative", width: "100%", overflow: "hidden" }}>
-      <pre>
-        <p
-          className="font-mono leading-none text-center
-                      xs:text-6xs md:text-5xs lg:text-4xs
-                    text-neutral-500"
-        >
-          {ascii}
-        </p>
-      </pre>
+      <CodeBlock>
+        <pre>
+          <p
+            className="font-mono leading-none text-center
+                      xs:text-6xs sm:text-5xs lg:text-4xs xl:text-3xs
+                    text-neutral-700"
+          >
+            {ascii}
+          </p>
+        </pre>
+      </CodeBlock>
       <Canvas
         gl={{
           powerPreference: "low-power",
           canvas: hiddenCanvasRef.current || undefined,
         }}
         camera={{
-          fov: 20,
+          fov: 19,
           near: 0.1,
           far: 100,
-          position: [0, 2, 20],
+          position: [-0.15, 0.3, 20],
+          rotation: [0, 0, 0],
         }}
         style={{
           position: "absolute",
