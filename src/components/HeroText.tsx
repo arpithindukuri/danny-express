@@ -10,19 +10,19 @@ export function HeroText({
   var color = "";
 
   if (type === "secondary") {
-    size = "xs:text-lg md:text-2xl lg:text-4xl";
+    size = "xs:text-2xl sm:text-3xl md:text-4xl";
     font = "font-light";
     color = "text-neutral-500";
   }
 
   if (type === "primary") {
-    size = "xs:text-2xl md:text-4xl lg:text-6xl";
+    size = "xs:text-4xl sm:text-6xl md:text-7xl";
     font = "font-medium";
     color = "text-neutral-500";
   }
 
   if (type === "primary-colored") {
-    size = "xs:text-2xl md:text-4xl lg:text-6xl";
+    size = "xs:text-4xl sm:text-6xl md:text-7xl";
     font = "font-medium";
     color = "text-orange-500";
   }

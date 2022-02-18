@@ -8,28 +8,29 @@ export default function Hero() {
     <div
       className="flex xs:flex-col xl:flex-row-reverse
                 justify-around items-center
-                box-border xs:p-16 md:p-32 xl:p-40"
+                xs:p-16 md:p-24 xl:p-32"
     >
-      <div
-        className="flex flex-col justify-center
-                  xs:ml-0 xl:ml-16"
-      >
+      <div className="flex justify-center">
         <Train />
       </div>
       <div
-        className="w-fit flex flex-col justify-center
-                  xs:mt-16 xl:mt-0"
+        className="xs:mr-0 xl:mr-20
+                  xs:mt-20 xl:mt-0"
       >
-        <HeroText type="secondary" text="hi, welcome to" />
-        <div className="flex w-fit mb-12">
-          <HeroText type="primary" text="danny." />
-          <HeroText type="primary-colored" text="express" />
+        <div className="w-fit flex flex-col justify-center">
+          <HeroText type="secondary" text="hi, welcome to" />
+          <div className="flex w-fit">
+            <HeroText type="primary" text="danny." />
+            <HeroText type="primary-colored" text="express" />
+          </div>
         </div>
-        <CodeBlock>
-          {"// a collection of software experiences,"}
-          <br />
-          {"// created by me"}
-        </CodeBlock>
+        <div className="mt-16">
+          <CodeBlock>
+            {"// a collection of software experiences,"}
+            <br />
+            {"// created by me"}
+          </CodeBlock>
+        </div>
         <div
           className="flex xs:flex-col sm:flex-row
                     mt-16

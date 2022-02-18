@@ -143,7 +143,7 @@ export default function Train() {
         <pre>
           <p
             className="font-mono leading-none text-center
-                      xs:text-6xs sm:text-5xs lg:text-4xs xl:text-3xs
+                      xs:text-6xs sm:text-5xs md:text-4xs xl:text-4xs
                     text-neutral-700"
           >
             {ascii}
